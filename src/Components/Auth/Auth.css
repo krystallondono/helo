@@ -1,0 +1,16 @@
+authPage{
+    /* height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.formBox{
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #FF70A6, #FF9770, #FFD670 );
+}
