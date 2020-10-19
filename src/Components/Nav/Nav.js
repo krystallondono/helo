@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 import './Nav.css';
+import {withRouter} from 'react-router';
 
 class Nav extends Component {
 
@@ -19,8 +20,9 @@ class Nav extends Component {
                 </li>
             </ul>
             </div>
-        )
+            )
+        
     }
 }
 
-export default Nav;
+export default withRouter(Nav);

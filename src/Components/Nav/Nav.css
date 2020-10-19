@@ -1,10 +1,11 @@
 .navBar {
     height: 100%; 
-    width: 160px; 
+    width: 125px; 
     position: fixed; 
     z-index: 1; 
     top: 0; 
     left: 0;
     padding-top: 20px;
     background-image: linear-gradient(#FF9770, #FF70A6);
+    box-shadow: 2px 2px 5px #403d39;
 }

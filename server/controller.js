@@ -12,7 +12,7 @@ module.exports = {
         }
         // otherwise we proceed to salt and hash that password, delicious
         let salt = bcrypt.genSaltSync(10);
-        let hash =bcrypt.hashSync(password, salt);
+        let hash = bcrypt.hashSync(password, salt);
         // save it a variable of new user and....
         const newUser = await db.register_user({username, hash, profile_pic});
         // place it smack on a session and send it client-side!!
@@ -38,13 +38,13 @@ module.exports = {
         
         delete foundUser[0].password;
 
-        req.session.user = foundUser[0];
+        req.session.user = {username: foundUser[0].username, password: foundUser[0].password};
         res.status(202).send(req.session.user);
 
     },
 
     logout: (req, res) => {
-        //destroy the session hahahahaha
+        //destroy the session 
         req.session.destroy();
         res.sendStatus(200);
     }
